@@ -54,7 +54,7 @@ const Projects = () => {
                                         )
                                     })}
                                 </ul>
-                                <a href="" className="text-sm font-semibold text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300">View project →</a>
+                                <a href="" className="text-sm font-semibold text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300">View project </a>
                             </div>
                         </article>
                     )
