@@ -1,42 +1,41 @@
-import emailjs from "@emailjs/browser"
+import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
 const Contact = () => {
+  const form = useRef();
+  const [status, setStatus] = useState({ message: "", type: "" });
 
-    const form = useRef();
-    const [status,setStatus] = useState({ message: "", type: "" });
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setStatus({
+      message: "Sending...",
+      type: "Info",
+    });
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        form.current,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY, // public key
+      )
+      .then(
+        () => {
+          setStatus({
+            message: "Message send sucessfully!",
+            type: "success",
+          });
+          form.current.reset();
+        },
+        (error) => {
+          setStatus({
+            message: "Failed to send message, Please try again.",
+            type: "error",
+          });
+          console.error(error);
+        },
+      );
+  };
 
-    const sendEmail = (e) =>
-    {
-        e.preventDefault();
-        setStatus({
-            message : "Sending...",
-            type : "Info"
-        });
-        emailjs.sendForm(
-            'service_wafb1ee',// My Servive id
-            'template_o03c1yl', // template id
-            form.current,
-            'pkY25dJbSM69MA3QF' // public key
-        ).then(
-            () =>
-            {
-                setStatus({
-            message : "Message send sucessfully!",
-            type : "success"
-        });
-                form.current.reset();
-            },
-            (error) => {
-                setStatus({
-            message : "Failed to send message, Please try again.",
-            type : "error"
-        });
-                console.error(error);
-            }
-        )
-    }
-
-    const getStatusClasses = () => {
+  const getStatusClasses = () => {
     switch (status.type) {
       case "success":
         return "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/50 border-emerald-200 dark:border-emerald-800";
@@ -64,7 +63,11 @@ const Contact = () => {
             {status.message}
           </div>
         )}
-        <form ref={form} onSubmit={sendEmail} className="mx-auto grid w-full max-w-2xl gap-4">
+        <form
+          ref={form}
+          onSubmit={sendEmail}
+          className="mx-auto grid w-full max-w-2xl gap-4"
+        >
           <label
             htmlFor="name"
             className="grid gap-1 text-sm font-medium text-slate-700 dark:text-slate-200"
