@@ -39,7 +39,7 @@ const Projects = () => {
                 projects.map((p, index) => {
                     return(
                         <article key={index} className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-md dark:border-slate-700 dark:bg-slate-800">
-                            <img src="../../public/1.jpg" alt="project image" className="aspect-video transition duration-300 group-hover:scale-105"/>
+                            <img src="/1.jpg" alt="project image" className="aspect-video transition duration-300 group-hover:scale-105"/>
                             <div className="flex flex-1 flex-col p-6">
                                 <h3 className="mb-2 text-xl font-semibold text-slate-900 transition group-hover:text-blue-600 dark:text-slate-100 dark:group-hover:text-blue-400">
                                     {p.title}

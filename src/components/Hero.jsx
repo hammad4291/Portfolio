@@ -1,4 +1,3 @@
-import "../../public/me.jpg";
 const Hero = () => {
   return (
     <section
@@ -33,7 +32,7 @@ const Hero = () => {
       </div>
       <div className="flex shrink-0 items-center justify-center">
         <img
-          src="../../public/me.jpg"
+          src="/me.jpg"
           alt="image"
           className="h-56 w-56 rounded-full object-cover shadow-lg ring-4 ring-blue-100 dark:ring-slate-700"
         />
