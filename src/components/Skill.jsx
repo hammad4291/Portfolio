@@ -2,27 +2,27 @@ const Skills = () => {
   const skills = [
     {
       title: "Frontend",
-      discription: "HTML, CSS, JavaScript, React, Tailwind CSS",
+      discription: "React.js, Redux Toolkit, JavaScript (ES6+), HTML5, CSS3, Tailwind CSS",
     },
     {
-      title: "Frontend",
-      discription: "HTML, CSS, JavaScript, React, Tailwind CSS",
+      title: "Backend",
+      discription: "C#, .NET / .NET Core, Web API, Entity Framework, Java, RESTful APIs",
     },
     {
-      title: "Frontend",
-      discription: "HTML, CSS, JavaScript, React, Tailwind CSS",
+      title: "Databases",
+      discription: "SQL Server, SQL, Relational Database Design, CRUD Operations",
     },
     {
-      title: "Frontend",
-      discription: "HTML, CSS, JavaScript, React, Tailwind CSS",
+      title: "Quality & Security",
+      discription: "JWT Authentication, SonarQube, xUnit, Unit Testing, Serilog",
     },
     {
-      title: "Frontend",
-      discription: "HTML, CSS, JavaScript, React, Tailwind CSS",
+      title: "Engineering Concepts",
+      discription: "OOP, Data Structures & Algorithms, Software Architecture, MVC Pattern",
     },
     {
-      title: "Frontend",
-      discription: "HTML, CSS, JavaScript, React, Tailwind CSS",
+      title: "Tools & Process",
+      discription: "Git, GitHub, Agile / Scrum, Code Reviews, Vite",
     },
   ];
   return (

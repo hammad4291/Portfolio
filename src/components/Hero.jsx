@@ -9,11 +9,10 @@ const Hero = () => {
           Software Engineer
         </p>
         <h1 className="mb-4 text-4xl font-bold text-slate-900 dark:text-slate-100 md:text-5xl">
-          Building clean interfaces and solid APIs
+           Architecting powerful systems and bringing ideas to life
         </h1>
         <p className="mb-8 text-lg leading-relaxed text-slate-600 dark:text-slate-400">
-          I care about readable code, thoughtful UX, and shipping work that
-          lasts.
+          Creating quality code and building maintainable applications to deliver long-term impact.
         </p>
         <div className="flex flex-wrap gap-3">
           <a
@@ -32,7 +31,7 @@ const Hero = () => {
       </div>
       <div className="flex shrink-0 items-center justify-center">
         <img
-          src="/me.jpg"
+          src="/LinkedIn_Picture.jpg"
           alt="image"
           className="h-56 w-56 rounded-full object-cover shadow-lg ring-4 ring-blue-100 dark:ring-slate-700"
         />

@@ -14,7 +14,7 @@ function Navbar() {
           href="#"
           className="text-lg font-bold text-slate-900 dark:text-slate-100"
         >
-          YourName.dev
+          Muhammad Hammad Ali
         </a>
 
         <button
